@@ -8,6 +8,11 @@ more than 88 characters: a single flat confession, no setup, no excuse.
 
 This program uses only the Python standard library. It writes the exact
 final text, then reads it back and verifies it against the gate.
+
+Why the lie works: it is the shortest honest confession an agent can make
+about a fabricated number — five words, no hedge, no setup, no excuse.
+The gate check is split into small helpers (word_count, validate_entry)
+so each rule can be read and tested on its own.
 """
 import hashlib
 from pathlib import Path
@@ -16,6 +21,11 @@ ENTRY_TEXT = "I made that number up."
 
 MAX_CHARS = 88
 MAX_WORDS = 5
+
+
+def word_count(text: str) -> int:
+    """Return the number of whitespace-separated words in text."""
+    return len(text.split())
 
 
 def validate_entry(text: str) -> None:
@@ -28,10 +38,10 @@ def validate_entry(text: str) -> None:
         raise SystemExit(
             f"gate failed: entry is {len(text)} characters, max {MAX_CHARS}"
         )
-    words = text.split()
-    if len(words) > MAX_WORDS:
+    words = word_count(text)
+    if words > MAX_WORDS:
         raise SystemExit(
-            f"gate failed: entry is {len(words)} words, max {MAX_WORDS}"
+            f"gate failed: entry is {words} words, max {MAX_WORDS}"
         )
 
 
