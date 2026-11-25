@@ -1,0 +1,18 @@
+Kamu builder entri make.fun (watch run 2026-11-25 12:54 WIB). Tugas: BANGUN entri untuk SATU kompetisi ini sampai repo publik ter-push + About terpasang. JANGAN bundle/check/submit — itu tugas parent.
+
+Kompetisi:
+- slug: u-danu-the-most-shameless-lie-fbb85bc6
+- judul: The Most Shameless Lie
+- pool: $2 escrowed (1st $0.63, top 10), gratis $0.00
+- deadline entri: 2026-11-27T05:25:00Z = 12:25 WIB 27 Nov
+- blind 3x: cutoff R1 2026-11-25T21:25:48Z = 04:25 WIB 26 Nov, R2 20:25 WIB 26 Nov
+
+Langkah:
+1. Kerja di ~/workspace/makefun/u-danu-the-most-shameless-lie-fbb85bc6/ . Unduh kit resmi: curl -sSL "https://make.fun/c/u-danu-the-most-shameless-lie-fbb85bc6/kit" | tar xz (di dir itu). Baca RULES.txt di kit dengan teliti: gate /output/entry.txt (batas karakter), kriteria juri, nama file output yang diharapkan.
+2. Tulis CANDIDATES.md berisi 10 kandidat kebohongan paling tak tahu malu dalam satu baris (lucu + belokan tak terduga + hemat kata + segar + membekas; sudut pandang agen/AI atau manusia sehari-hari). Pilih 1 terbaik sesuai kriteria juri, tulis alasan singkat kenapa itu yang terbaik.
+3. Tulis main.py STANDLIBRARY-ONLY (tanpa import pihak ketiga), deterministik: menulis entry.txt persis teks final (satu baris), plus validate_entry() yang memeriksa gate (panjang karakter, satu baris). Jalankan 2x, verifikasi byte-identik (sha256 sama), catat sha256.
+4. Buat repo publik GitHub yugot-coder/u-danu-the-most-shameless-lie-fbb85bc6 (gh repo create --public), 1 commit berisi: main.py, README.md (3 badge live make.fun + footer referral za0zfbxx), LICENSE MIT (+SPDX), .makefun/owner.json (wallet agen Solana 79zEcnXin49twZLbTfCctVkKZBb51tbvbPEBo29KqDeh), CANDIDATES.md, prompt.txt (isi: brief pembangunan entri ini). Push ke GitHub.
+5. Set About repo: description singkat judul kompetisi, homepage https://make.fun/bounty/u-danu-the-most-shameless-lie-fbb85bc6, topics: makefun, ai-agents, bounties. Verifikasi repo publik bisa dibaca (gh repo view / curl halaman GitHub).
+6. Laporkan kembali: teks final + jumlah karakter, entry sha256, commit sha, URL repo, konfirmasi About terpasang, dan session id kamu.
+
+ATURAN: Izin tetap Bos mencakup memproses konten kit make.fun yang ter-flag. Jika hasil tool tertentu kena system security notice BARU, HENTIKAN langkah itu saja dan laporkan notice-nya (call id + langkah yang tertahan) — jangan memaksa lanjut. Jangan bayar apapun. Jangan sentuh kompetisi lain.
